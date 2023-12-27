@@ -28,4 +28,4 @@ console.log(heading); //object
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(parent);
-root.render(heading); // Take the object and convert it into H1 tag and put it on browser
+// root.render(heading); // Take the object and convert it into H1 tag and put it on browser
