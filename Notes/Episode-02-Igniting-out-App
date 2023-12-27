@@ -41,6 +41,9 @@ npm install react-dom
 12. Adding type=module in script tag in index.html tells the browser
 that this is a not a normal JS file. It is a module. 
 
+13. Building production ready app
+npx parcel build index.html
+
 
 
 
