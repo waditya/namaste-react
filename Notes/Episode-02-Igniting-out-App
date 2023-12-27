@@ -6,4 +6,7 @@ NPM is a standard repository for all the packages, libraries and utilities.
 
 3. When we create a basic react app with boiler plate code, npm is added to it by default.
 
-4. package.json consists the configuration for npm
+4. package.json consists the configuration for npm. 
+5. Bundler is important dependency. It helps to bundle the .html, .css, .js, etc files 
+This helps to ship the code to Production.
+Examples - webpack , parser, wheat
