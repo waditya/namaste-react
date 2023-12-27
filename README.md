@@ -20,3 +20,5 @@ Please update project details here
 - Background App Diagnostics
 - Error Handling
 - Support HTTPs in dev environment
+- Tree shaking - remove unused code
+- Different dev and prod bundles
