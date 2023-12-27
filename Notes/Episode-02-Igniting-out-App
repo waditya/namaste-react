@@ -1,2 +1,9 @@
-Difference between dev and prod code is that prod code is highly optimized. 
+1. Difference between dev and prod code is that prod code is highly optimized. 
 Be it libraries, photos, bundling, etc
+
+2. NPM (NPM manages packages but it does not stand as Node Package Manager)
+NPM is a standard repository for all the packages, libraries and utilities. 
+
+3. When we create a basic react app with boiler plate code, npm is added to it by default.
+
+4. package.json consists the configuration for npm

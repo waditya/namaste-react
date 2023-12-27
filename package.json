@@ -1,0 +1,22 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is Namaste React by Aditya W",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waditya/namaste-react.git"
+  },
+  "keywords": [
+    "namaste-react"
+  ],
+  "author": "Aditya W",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waditya/namaste-react/issues"
+  },
+  "homepage": "https://github.com/waditya/namaste-react#readme"
+}
