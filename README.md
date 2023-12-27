@@ -1,1 +1,2 @@
-This is README.md file
+This is README.md file. 
+Please update project details here
