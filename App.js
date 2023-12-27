@@ -1,8 +1,12 @@
+import React from "react"; // Import React from the react package in the node_modules
+import ReactDOM from "react-dom/client"; 
+
+
 const parent = React.createElement(
     "div", {id:"parent"}, 
     [ React.createElement(
         "div", {id:"child"},[
-            React.createElement("h1", { older:"yes"}, "I am an H1 Tag"), 
+            React.createElement("h1", { older:"yes"}, "This is Namaste React 🙏🚀"), 
             React.createElement("h2", { younger:"yes"}, "I am an H2 Tag"), 
     ]
             ),
