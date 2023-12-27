@@ -9,4 +9,10 @@ NPM is a standard repository for all the packages, libraries and utilities.
 4. package.json consists the configuration for npm. 
 5. Bundler is important dependency. It helps to bundle the .html, .css, .js, etc files 
 This helps to ship the code to Production.
-Examples - webpack , parser, wheat
+Examples - webpack , parcel, wheat
+6. There are 2 type of dependencies. Dev dependencies and Normal dpendencies. 
+Dev dependiencies are required in Dev environment
+Normal are required in all environments including Production
+7. Carat (^) in fornt of dependency version implies that if a minor version a.b.(x+1) is available, then it will upgrade to it.
+However, it will not upgrade major version (a+1).b.x. With tilde (~), it will upgrade major version automatically if it is 
+available. Major version upgrades can break the app. It is safe to keep ^ and u[grade minor versions.]
