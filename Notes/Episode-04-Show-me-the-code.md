@@ -26,3 +26,9 @@
 - Props are normal arguments to component (Component is like JS function)
 - Props are like passing values dynamically through function arguments
 - When you have to pass values dynamically to a component, you can use props
+
+## Config Driven UI (Important for Frontend UI Interview)
+
+- You build a config driven UI. The data from the backend determines the configuration on frontend.
+- Example - Carousal (showing offers) for a food delivery app will display different data on UI in Delhi, Pune, Mumbai, etc
+- 
