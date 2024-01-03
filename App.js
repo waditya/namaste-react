@@ -44,15 +44,16 @@ const styleCard = {
     backgroundColor : "darkkhaki"
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+    console.log(props);
     return (
         <div className="restaurant-card" style={styleCard}>
             <img
             className="restaurant-logo"
             alt="Aroma Foods"
-            src = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/uzvhmhkohovrploo4x3y"/>
-            <h3> Aroma Foods</h3>
-            <h4> Poha, Upma, Wada-Pav</h4>
+            src = { props.imgSrc } />
+            <h3> { props.restaurantName }</h3>
+            <h4> { props.cuisine }</h4>
             <h4> 4.4 stars</h4>
             <h4> 38 minutes</h4>
         </div>
@@ -65,30 +66,9 @@ const Body = () => {
             Search
             </div>
             <div className="restaurant-container">
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
+                <RestaurantCard restaurantName = "Aroma Foods" cuisine="Poha, Upma, Wada-Pav" imgSrc="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/uzvhmhkohovrploo4x3y"/>
+                <RestaurantCard restaurantName = "Ganesh Bhel House" cuisine="Chat, Pani Puri, Ragda Patis" imgSrc="https://ganeshbhel.com/wp-content/uploads/2021/09/6-326x170-1.jpg"/>
+                <RestaurantCard restaurantName = "Katakir Misal" cuisine="Misal Pav" imgSrc="https://b.zmtcdn.com/data/pictures/chains/4/13004/3001549d95106b79794bf1d5222770ca.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"/>
             </div>
         </div>
     )

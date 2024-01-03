@@ -20,3 +20,9 @@
 - Header will have Logo, Navigation Bar (NavItem consisting of various navigational menus)
 - Body component will have search input, Card (Restaurant Container) container component containing Restaurant card component
 - Footer will have Copyright, Links, Address, and Contact components. 
+
+## Props (Properties)
+- Used to dynamically pass values to a component
+- Props are normal arguments to component (Component is like JS function)
+- Props are like passing values dynamically through function arguments
+- When you have to pass values dynamically to a component, you can use props
