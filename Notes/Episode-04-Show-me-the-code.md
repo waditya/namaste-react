@@ -37,4 +37,4 @@
 - Best Practice Avoid React Warnings relatred Key while iterating Maps. ALWAYS GIVE A KEY!
 - Why we Need Keys ?
 - The index of the map can also be used as keys. However, this should be avoided.
-React documentation mentions using indexes for keys.
+React documentation mentions using indexes for keys as an Anti-Pattern.
