@@ -1,41 +1,8 @@
 import React from "react"; // Import React from the react package in the node_modules
 import ReactDOM from "react-dom/client"; 
+import Header from "./components/Header";
+import Body from "./components/Body.js";
 
-/*
-* Header
-* - Logo
-* - Nav Items
-* Body
-*  - Search
-*  - Restaurant Container
-*     - Restaurant Card
-*       - Image
-*       - Name of Restaurant, Star Rating, Cuisine, ETA
-* Footer
-*  - Copyrights
-*  - Links
-*  - Address
-*  - Contact
-*/
-const Header = () => {
-    return(
-        <div className="header">
-            <div className="logo-container">
-                <img 
-                className="logo"
-                src="https://www.logodesign.net/logo/smoking-burger-with-letuce-3624ld.png" />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
 
 // Define component RestaurantCard
 
@@ -66,7 +33,7 @@ const RestaurantCard = (props) => {
             src = { imgSrc } />
             <h3> { name }</h3>
             <h4> { cuisine }</h4>
-            <h4> { rating} stars</h4>
+            <h4> { rating } stars</h4>
             <h4> { ETAinMins} minutes</h4>
         </div>
     )
@@ -97,31 +64,33 @@ const restaurantList = [
         rating: "4.5",
         ETAinMins: "30"
     },
+    {
+        uuid: 4,
+        name: "Maskawala & Co.",
+        cuisine: "Snacks, Bakery and Biryani",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/jklhqvl4kyvishuidtw3",
+        rating: "4.4",
+        ETAinMins: "22"
+    },
+    {
+        uuid: 5,
+        name: "Gokhales Kitchen",
+        cuisine: "Thali, Street Food",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/aokllwrug5o5w4as5wqq",
+        rating: "4.3",
+        ETAinMins: "27"
+    },
+    {
+        uuid: 6,
+        name: "Burger King",
+        cuisine: "Thali, Street Food",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
+        rating: "4.2",
+        ETAinMins: "21"
+    },
 ];
 
-const Body = () => {
-    return (
-        <div className="body">
-            <div className="Search">
-            Search
-            </div>
-            <div className="restaurant-container">
-                {
-                    restaurantList.map(i => <RestaurantCard key= {i.uuid} restaurantData= { i }/>)
-                }
-                {
-                    restaurantList.map(jsonObject => <RestaurantCard key= {jsonObject.uuid} restaurantData= { jsonObject }/>)
-                }
-                {
-                    restaurantList.map(restaurant => <RestaurantCard key= {restaurant.uuid} restaurantData= { restaurant }/>)
-                }
-                <RestaurantCard  restaurantData={restaurantList[0]} />
-                <RestaurantCard  restaurantData={restaurantList[1]} />
-                <RestaurantCard  restaurantData={restaurantList[2]} />
-            </div>
-        </div>
-    )
-}
+
 
 // AppLayout component is function which returns JSX code (which is a <div>)
 const AppLayout = () => {

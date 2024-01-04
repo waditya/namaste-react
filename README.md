@@ -22,3 +22,21 @@ Please update project details here
 - Support HTTPs in dev environment
 - Tree shaking - remove unused code
 - Different dev and prod bundles
+
+# Namaste Food
+
+
+* Header
+* - Logo
+* - Nav Items
+* Body
+*  - Search
+*  - Restaurant Container
+*     - Restaurant Card
+*       - Image
+*       - Name of Restaurant, Star Rating, Cuisine, ETA
+* Footer
+*  - Copyrights
+*  - Links
+*  - Address
+*  - Contact
