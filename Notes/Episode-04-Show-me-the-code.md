@@ -33,3 +33,4 @@
 - Example - Carousal (showing offers) for a food delivery app will display different data on UI in Delhi, Pune, Mumbai, etc
 - Use Java Script Map function to iterate over an Array 
 - In React project, a good way to use is Map Filter and Reduce
+- Map, Filter and Reduce YouTube Reference : https://www.youtube.com/watch?v=zdp0zrpKzIE&ab_channel=AkshaySaini
