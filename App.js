@@ -46,19 +46,59 @@ const styleCard = {
 
 const RestaurantCard = (props) => {
     console.log(props);
+    const { restaurantData }  = props;
+    console.log("Logging restValues :: "+restaurantData);
+    // Perform de-structuring using Optional Chaining
+    const { 
+        name, 
+        imgSrc, 
+        cuisine, 
+        rating, 
+        ETAinMins
+    } = restaurantData;
+
+
     return (
         <div className="restaurant-card" style={styleCard}>
             <img
             className="restaurant-logo"
-            alt="Aroma Foods"
-            src = { props.imgSrc } />
-            <h3> { props.restaurantName }</h3>
-            <h4> { props.cuisine }</h4>
-            <h4> 4.4 stars</h4>
-            <h4> 38 minutes</h4>
+            alt= { name }
+            src = { imgSrc } />
+            <h3> { name }</h3>
+            <h4> { cuisine }</h4>
+            <h4> { rating} stars</h4>
+            <h4> { ETAinMins} minutes</h4>
         </div>
     )
 }
+
+const restaurantList = [
+    {
+        uuid: 1,
+        name: "Aroma Foods",
+        cuisine: "Maharashtrian snacks, North Indian",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/uzvhmhkohovrploo4x3y",
+        rating: "4.4",
+        ETAinMins: "30"
+    },
+    {
+        uuid: 2,
+        name: "Ganesh Bhel House",
+        cuisine: "Savoury snacks (Chat)",
+        imgSrc: "https://ganeshbhel.com/wp-content/uploads/2021/09/6-326x170-1.jpg",
+        rating: "4",
+        ETAinMins: "25"
+    },
+    {
+        uuid: 3,
+        name: "Katakir Misal",
+        cuisine: "Maharashtrian",
+        imgSrc: "https://b.zmtcdn.com/data/pictures/chains/4/13004/3001549d95106b79794bf1d5222770ca.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+        rating: "4.5",
+        ETAinMins: "30"
+    },
+];
+
 const Body = () => {
     return (
         <div className="body">
@@ -66,9 +106,18 @@ const Body = () => {
             Search
             </div>
             <div className="restaurant-container">
-                <RestaurantCard restaurantName = "Aroma Foods" cuisine="Poha, Upma, Wada-Pav" imgSrc="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/uzvhmhkohovrploo4x3y"/>
-                <RestaurantCard restaurantName = "Ganesh Bhel House" cuisine="Chat, Pani Puri, Ragda Patis" imgSrc="https://ganeshbhel.com/wp-content/uploads/2021/09/6-326x170-1.jpg"/>
-                <RestaurantCard restaurantName = "Katakir Misal" cuisine="Misal Pav" imgSrc="https://b.zmtcdn.com/data/pictures/chains/4/13004/3001549d95106b79794bf1d5222770ca.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"/>
+                {
+                    restaurantList.map(i => <RestaurantCard key= {i.uuid} restaurantData= { i }/>)
+                }
+                {
+                    restaurantList.map(jsonObject => <RestaurantCard key= {jsonObject.uuid} restaurantData= { jsonObject }/>)
+                }
+                {
+                    restaurantList.map(restaurant => <RestaurantCard key= {restaurant.uuid} restaurantData= { restaurant }/>)
+                }
+                <RestaurantCard  restaurantData={restaurantList[0]} />
+                <RestaurantCard  restaurantData={restaurantList[1]} />
+                <RestaurantCard  restaurantData={restaurantList[2]} />
             </div>
         </div>
     )
