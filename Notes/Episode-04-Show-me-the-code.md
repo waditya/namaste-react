@@ -38,3 +38,5 @@
 - Why we Need Keys ?
 - The index of the map can also be used as keys. However, this should be avoided.
 React documentation mentions using indexes for keys as an Anti-Pattern.
+We don’t recommend using indexes for keys if the order of items may change. This can negatively impact performance and may cause issues with component state.
+https://legacy.reactjs.org/docs/lists-and-keys.html
