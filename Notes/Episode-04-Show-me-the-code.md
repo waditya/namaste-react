@@ -31,4 +31,4 @@
 
 - You build a config driven UI. The data from the backend determines the configuration on frontend.
 - Example - Carousal (showing offers) for a food delivery app will display different data on UI in Delhi, Pune, Mumbai, etc
-- 
+- Use Java Script Map function to iterate over an Array
