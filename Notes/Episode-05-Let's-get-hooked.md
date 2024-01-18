@@ -44,4 +44,6 @@ These funtions have some super power. Have lot of logic behind it to provide lot
 
 - Import useState as "react". You have to import as a named import.
 
+Imported as : import { useState} from "react"
+
 
