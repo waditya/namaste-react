@@ -25,3 +25,8 @@ These could be your urls. Generally referred as common or utils.
 - Similarly, there are 2 types of import - 
     1. defualt import : import Component from "<path/ComponentFileName>"
     2. Named import : import {Componet} from "<path/ComponentFileName>"
+
+- Can we have default component and named component in same file ?
+=> Yes, a dummyComponent is added in styleCard.js
+
+
