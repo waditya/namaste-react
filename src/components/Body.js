@@ -1,9 +1,13 @@
 import RestaurantCard from "./RestaurantCard";
 import restaurantList from "../utils/mockData";
+import { useState} from "react"; // useState is imported as named import from react
 
 const Body = () => {
-    
-    let listofRestaurants = [
+
+    // Local State Variable
+
+    const [listofRestaurants, setlistofRestaurants] = useState(restaurantList);
+    /* let listofRestaurants = [
         {
             uuid: 1,
             name: "Aroma Foods",
@@ -164,7 +168,7 @@ const Body = () => {
             rating: "4.4",
             ETAinMins: "25"
         },
-    ];
+    ]; */
 
     return (
         <div className="body">
@@ -172,13 +176,13 @@ const Body = () => {
                 <button 
                     className="filter-btn" 
                     onClick={() => 
-                    {   restaurantList = restaurantList.filter(
-                        (res) => res.rating > 4.5
+                    {   
+                        const filteredList  = listofRestaurants.filter(
+                        (res) => res.rating > 4.2
                     );
-                        // Filter Logic Here
-                        listofRestaurants = listofRestaurants.filter(
-                            (res) => res.rating > 4.4
-                        );
+
+                    setlistofRestaurants(filteredList);
+                        
                         console.log(listofRestaurants);
                         // alert("Filter Button Clicked!")
                     }}
