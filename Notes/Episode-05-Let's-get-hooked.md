@@ -39,11 +39,44 @@ These funtions have some super power. Have lot of logic behind it to provide lot
 
 - 2 important React hooks - 
 
-  - useState() : Generate Superpowerful state variables in React.
+  - useState() : Generate Superpowerful state variables in React. Whenever react state variable changes, React will re-renders the component.
   - useEffect()
 
 - Import useState as "react". You have to import as a named import.
 
-Imported as : import { useState} from "react"
+   Imported as : import { useState} from "react";
 
+## React - Reconciliation ALgorithm 
+React uses Reconciliation ALgorithm . It is also known as **ReactFiber**. 
+On the UI, suppose, there are 7 Restaurant Cards. Suppose, UI changes due to filtering from 7 to 3 filtered cards. 
+
+React creates Virtual DOM - It is not an actual DOM. Actual DOM consists of tags like 
+<div>
+  <div>
+    <div> </div>
+  </div>
+</div>
+Virtual DOM is a representation of actual DOM. 
+
+Example : console.log(Body) element will print a react element. This is a JS object. React creates an object out of it. 
+========
+
+Diff algorithm finds difference between updates Virtual DOM and previous Virtual DOM. 
+In this example, the Diff Algo will find that 4 Restaurant Cards are removed. 
+Once this difference calculated, it will update the actual DOM on every Render cycle. 
+This entire algorithm is known as ReactFiber. *ReactFiber* is a new way of finding the diff and updating the DOM. 
+
+Finding the difference between current and updated DOM will consist fo comparing the HTML DOM.
+On the other hand, finding the difference for virtual DOM is faster because it is stored as a JS object by React. 
+ReactFiber is an ongoing reimplementation of React's core algorithm. It started with React 16. 
+The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures
+
+**Reference :** https://github.com/acdlite/react-fiber-architecture
+
+## Incremental Rendering
+**Incremental rendering:** the ability to split rendering work into chunks and spread it out over multiple frames.
+
+## Why is React fast ?
+Because it has virtual DOM. It has a DIff algorithm which finds the difference in current and updates state of the virtual DOM.
+It can efficiently re-render the actual DOM during the rendering cycle. 
 
