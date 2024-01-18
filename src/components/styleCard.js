@@ -4,3 +4,7 @@
 export const styleCard = {
     backgroundColor : "darkkhaki"
 };
+
+export const dummyComponent = {
+
+};

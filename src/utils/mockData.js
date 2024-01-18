@@ -36,16 +36,128 @@ const restaurantList = [
         name: "Gokhales Kitchen",
         cuisine: "Thali, Street Food",
         imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/aokllwrug5o5w4as5wqq",
-        rating: "4.3",
+        rating: "4.0",
         ETAinMins: "27"
     },
     {
         uuid: 6,
         name: "Burger King",
-        cuisine: "Thali, Street Food",
+        cuisine: "American, Snacks",
         imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
         rating: "4.2",
         ETAinMins: "21"
+    },
+    {
+        uuid: 7,
+        name: "Irani Cafe",
+        cuisine: "Bakery, Snacks, Deserts",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/gprevswsanojqseht2ic",
+        rating: "4.6",
+        ETAinMins: "17"
+    },
+    {
+        uuid: 8,
+        name: "Mad Momos",
+        cuisine: "Chinese, Tibetan",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/qvts5oqwkc1up13mjzr9",
+        rating: "4",
+        ETAinMins: "28"
+    },
+    {
+        uuid: 9,
+        name: "Atithi Veg",
+        cuisine: "South Indian",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/f7b258fd856001f9d660ac4b233aa34a",
+        rating: "4.4",
+        ETAinMins: "31"
+    },
+    {
+        uuid: 10,
+        name: "Lassi Wassi",
+        cuisine: "Lebanese",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/qt0fjw61mfp0uf6yincv",
+        rating: "4.5",
+        ETAinMins: "19"
+    },
+    {
+        uuid: 11,
+        name: "Kunafa Bytes",
+        cuisine: "",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/mkutyceeuqi6zcevuah6",
+        rating: "4.5",
+        ETAinMins: "19"
+    },
+    {
+        uuid: 12,
+        name: "Wholesome Meals",
+        cuisine: "North Indian",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/mp1ameqpxmd5bp3vm5f1",
+        rating: "4.1",
+        ETAinMins: "24"
+    },
+    {
+        uuid: 13,
+        name: "Girija",
+        cuisine: "North Indian, Maharashtrian",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/sepkzqzgz7zfgicikaqq",
+        rating: "4",
+        ETAinMins: "25"
+    },
+    {
+        uuid: 14,
+        name: "Vernekar`s - Goan Fish Currry",
+        cuisine: "Seafood",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/bjkwhn4sknaprwsb4sjb",
+        rating: "4.5",
+        ETAinMins: "23"
+    },
+    {
+        uuid: 15,
+        name: "Nisarg",
+        cuisine: "Coastal",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/kqldoyhvqgq48g5iuqgn",
+        rating: "4.4",
+        ETAinMins: "29"
+    },
+    {
+        uuid: 16,
+        name: "Mad Over Bowls (MOB)",
+        cuisine: "Chinese, Tibetan",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/abzhzo9hxudxiwgegmtq",
+        rating: "4.1",
+        ETAinMins: "23"
+    },
+    {
+        uuid: 17,
+        name: "KFC",
+        cuisine: "American Snacks",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/f01666ac73626461d7455d9c24005cd4",
+        rating: "4.2",
+        ETAinMins: "26"
+    },
+    {
+        uuid: 18,
+        name: "McDonald's",
+        cuisine: "Burgers, Cafe",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/bb7ae131544c7d37e10fc5faf76f09d6",
+        rating: "4.4",
+        ETAinMins: "18"
+    },
+    {
+        uuid: 19,
+        name: "Cakeman",
+        cuisine: "Bakery, Desserts",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/0f3277256bd187ac77998656a101ecc5",
+        rating: "4.5",
+        ETAinMins: "15"
+    },
+    {
+        uuid: 20,
+        name: "Domino's Pizza",
+        cuisine: "",
+        imgSrc: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/oaiyzbasnpmhiuailzb3",
+        rating: "4.4",
+        ETAinMins: "25"
     },
 ];
 
