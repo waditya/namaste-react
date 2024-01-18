@@ -29,4 +29,19 @@ These could be your urls. Generally referred as common or utils.
 - Can we have default component and named component in same file ?
 => Yes, a dummyComponent is added in styleCard.js
 
+## React Hooks
+- They are used to create state variables. 
+Functional component is a normal JS function. React elemment is  plane JS object. 
+React hook is a normal JS function given to us by Reacct. It is pre-built.
+These funtions have some super power. Have lot of logic behind it to provide lot of capabilities. 
+
+- These react hooks are inside the react module/library
+
+- 2 important React hooks - 
+
+  - useState() : Generate Superpowerful state variables in React.
+  - useEffect()
+
+- Import useState as "react". You have to import as a named import.
+
 
