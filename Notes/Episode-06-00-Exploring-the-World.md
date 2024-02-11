@@ -35,6 +35,65 @@ the entire code needs to compiled, built and deploy the whole project. This is M
 
 * Example : /, /api, /ui, /sns 
 
+**Approcahes to fetch data**
+
+A. Approach-I
+Step-01 : Page Loads
+Step-02 : API calls is made. Say, it takes 500 ms to get the data
+Step-03 : The Page is rendered
+
+B. Approach-II
+Step-01 : Page Loads
+Step-02 : The Page is rendered with whatever we have i.e. Render the skeleton
+Step-03 : API calls is made. Say, it takes 500 ms to get the data
+Step-04 : The Page is rendered again with the data fetched
+
+
+*React always uses 2nd approach*
+This is a better approach and gives a good UX. 
+In approach-I, the page is frozen and 500 ms which is a bad UX. 
+Uses sees a lot of lag/jitteriness. 
+React has one of the faster rendering mechanism, hence 2 render cycles will be handled good by React. 
+
+### UseEfect hook in React
+
+Hook at the end of the day, is a normal JavaScript function for a specific purpose. 
+UseState hook is to create React state variables. Similarly, useEffect hook comes from 
+React library and is brought in as a Named import.
+
+useEffect takes 2 arguments. First argument is the callback function and the
+secidn one is dependency array.
+
+useEffect(()=> {}, []);
+
+Sample usage : 
+
+useEffect(()=> {
+    console.log('Arrow function within useEffect Invoked!')
+}, []);
+
+
+#### Purpose of useEffect
+useEffect is a React Hook that lets you synchronize a component with an external system.
+
+https://react.dev/reference/react/useEffect
+
+**The useEffect callback function is called after your component renders.**
+When the Body component is rendered, as soon as the component is rendered, 
+callback function is called and the the callback function will be executed. 
+
+In order to use the 2nd apprach of fetching data, after the component is rendered, we will be using the 
+useEffect hook. When you load the page, the body compone is rendered with whatever data (or no data) is available.
+During the rendering of this body fucntion, <ins>React will read the callback function within the useEffect hook 
+and park it aside.</ins> Once the body is rendered, React will go back to the callback function and execute it.
+
+This enables us to have a fetchData function, which will fetch data from external system by making an
+API call to the external system. <ins>Once the data is received, React will re-render the Body component
+with the newly available data.</ins> 
+
+
+
+
 
 
 

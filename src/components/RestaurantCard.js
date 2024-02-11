@@ -3,9 +3,9 @@ import { styleCard } from "./styleCard"; // Named import is imported in curly br
 // Define component RestaurantCard
 
 const RestaurantCard = (props) => {
-    console.log(props);
+    // console.log(props);
     const { restaurantData }  = props;
-    console.log("Logging restValues :: "+restaurantData);
+    // console.log("Logging restValues :: "+restaurantData);
     // Perform de-structuring using Optional Chaining
     const { 
         name, 
