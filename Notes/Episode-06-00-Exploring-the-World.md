@@ -37,16 +37,16 @@ the entire code needs to compiled, built and deploy the whole project. This is M
 
 **Approcahes to fetch data**
 
-A. Approach-I
-Step-01 : Page Loads
-Step-02 : API calls is made. Say, it takes 500 ms to get the data
-Step-03 : The Page is rendered
+**A. Approach-I** <br>
+Step-01 : Page Loads<br>
+Step-02 : API calls is made. Say, it takes 500 ms to get the data<br>
+Step-03 : The Page is rendered<br>
 
-B. Approach-II
-Step-01 : Page Loads
-Step-02 : The Page is rendered with whatever we have i.e. Render the skeleton
-Step-03 : API calls is made. Say, it takes 500 ms to get the data
-Step-04 : The Page is rendered again with the data fetched
+**B. Approach-II**<br>
+Step-01 : Page Loads<br>
+Step-02 : The Page is rendered with whatever we have i.e. Render the skeleton<br>
+Step-03 : API calls is made. Say, it takes 500 ms to get the data<br>
+Step-04 : The Page is rendered again with the data fetched<br>
 
 
 *React always uses 2nd approach*
@@ -92,7 +92,11 @@ API call to the external system. <ins>Once the data is received, React will re-r
 with the newly available data.</ins> 
 
 
+### Fetching data in React
 
+Data is fetched in React in same way as it is done in JavaScript.
+It used the superpower aka, the fetch() function call. This superpower is given to us , <ins>not by JS or React, but by the <b>browsers</b></ins>
+So, a JS engine will natively have capability to use the fetch() 
 
 
 
