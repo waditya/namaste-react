@@ -98,6 +98,8 @@ Data is fetched in React in same way as it is done in JavaScript.
 It used the superpower aka, the fetch() function call. This superpower is given to us , <ins>not by JS or React, but by the <b>browsers</b></ins>
 So, a JS engine will natively have capability to use the fetch() 
 
+## Optional CHaining in Java Script
+
 
 
 
