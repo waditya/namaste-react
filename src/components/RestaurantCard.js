@@ -9,11 +9,12 @@ const RestaurantCard = (props) => {
     // Perform de-structuring using Optional Chaining
     const { 
         name, 
-        imgSrc, 
-        cuisine, 
-        rating, 
-        ETAinMins
-    } = restaurantData;
+        cloudinaryImageId, 
+        cuisines, 
+        avgRating, 
+        costForTwo,
+        sla
+    } = restaurantData?.info
 
 
     return (
@@ -21,11 +22,12 @@ const RestaurantCard = (props) => {
             <img
             className="restaurant-logo"
             alt= { name }
-            src = { imgSrc } />
+            src = {"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId } />
             <h3> { name }</h3>
-            <h4> { cuisine }</h4>
-            <h4> { rating } stars</h4>
-            <h4> { ETAinMins} minutes</h4>
+            <h5>{ cuisines.join(", ") }</h5>
+            <h4> { avgRating } stars</h4>
+            <h4> { costForTwo }</h4>
+            <h4> { sla?.slaString}</h4>
         </div>
     )
 }
