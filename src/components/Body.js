@@ -20,6 +20,12 @@ const Body = () => {
 
         const json = await data.json();
         console.log(json);
+
+        // Optional chaining (Java Script feature) implemented in next line
+        console.log(
+            json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        );
+        setlistofRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     };
 
     return (
@@ -30,7 +36,7 @@ const Body = () => {
                     onClick={() => 
                     {   
                         const filteredList  = listofRestaurants.filter(
-                        (res) => res.rating > 4.2
+                        (res) => res.avgRating > 4.2
                     );
 
                     setlistofRestaurants(filteredList);
@@ -46,7 +52,7 @@ const Body = () => {
             </div>
             <div className="restaurant-container">
                 {
-                    listofRestaurants.map(i => <RestaurantCard key= {i.uuid} restaurantData= { i }/>)
+                    listofRestaurants.map(i => <RestaurantCard key= {i.info.id} restaurantData= { i }/>)
                 }
                 {/* {
                     restaurantList.map(jsonObject => <RestaurantCard key= {jsonObject.uuid} restaurantData= { jsonObject }/>)
