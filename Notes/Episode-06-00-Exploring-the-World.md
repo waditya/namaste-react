@@ -98,9 +98,11 @@ Data is fetched in React in same way as it is done in JavaScript.
 It used the superpower aka, the fetch() function call. This superpower is given to us , <ins>not by JS or React, but by the <b>browsers</b></ins>
 So, a JS engine will natively have capability to use the fetch() 
 
-## Optional CHaining in Java Script
+## Optional Chaining in Java Script
 
 
+The optional chaining (?.) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null, the expression short circuits and evaluates to undefined instead of throwing an error.
 
+Reference : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 
 
