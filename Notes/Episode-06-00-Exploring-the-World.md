@@ -106,3 +106,6 @@ The optional chaining (?.) operator accesses an object's property or calls a fun
 Reference : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 
 
+## Shimmer UI
+
+A shimmer UI is a version of the UI that doesn't contain actual content, but instead mimics the layout and shapes of the content that will eventually appear.

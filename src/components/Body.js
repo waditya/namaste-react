@@ -6,7 +6,7 @@ const Body = () => {
 
     // Local State Variable
 
-    const [listofRestaurants, setlistofRestaurants] = useState(restaurantList);
+    const [listofRestaurants, setlistofRestaurants] = useState([/* restaurantList */]);
 
     useEffect(()=>{
         // console.log('useEffect called!');
@@ -27,6 +27,10 @@ const Body = () => {
         );
         setlistofRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     };
+
+    if(listofRestaurants.length === 0) {
+        return (<h1> Loading ....</h1>);
+    }
 
     return (
         <div className="body">
