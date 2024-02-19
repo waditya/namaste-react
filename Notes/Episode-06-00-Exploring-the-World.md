@@ -109,3 +109,4 @@ Reference : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Op
 ## Shimmer UI
 
 A shimmer UI is a version of the UI that doesn't contain actual content, but instead mimics the layout and shapes of the content that will eventually appear.
+We can add empty cards to mimic a seamless UI. 
