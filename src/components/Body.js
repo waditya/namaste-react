@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import restaurantList from "../utils/mockData";
 import { useState, useEffect} from "react"; // useState is imported as named import from react
+import Shimmer from "./Shimmer";
 
 const Body = () => {
 
@@ -29,7 +30,7 @@ const Body = () => {
     };
 
     if(listofRestaurants.length === 0) {
-        return (<h1> Loading ....</h1>);
+        return (<Shimmer />);
     }
 
     return (
