@@ -113,3 +113,10 @@ We can add empty cards to mimic a seamless UI. It will rendered until real data 
 The idea behind the Shimmer UI is that you want to show user something very quickly - as soon as the page loads, the user should see something.
 The user will then anticipate that something is loading instead of an impression like web page is slow. 
 When the page is loading, you see something and then actual dataloads. 
+
+## Why we need state variables ?
+
+A normal variable upon changing value will show the new value in console.log statement. 
+However, it won't show change in the rendering of UI.
+In order to dynamically change the state of the UI, normal JS variables are not useful .
+Hence, we need the local state variable which are made possible by useState hooks in React.
