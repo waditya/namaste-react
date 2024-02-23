@@ -28,12 +28,10 @@ const Body = () => {
         );
         setlistofRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     };
-
-    if(listofRestaurants.length === 0) {
-        return (<Shimmer />);
-    }
-
-    return (
+    
+    // Conditional rendering
+    // User ternary operator for return 
+    return listofRestaurants.length === 0 ? <Shimmer /> : (
         <div className="body">
             <div className="filter">
                 <button 
