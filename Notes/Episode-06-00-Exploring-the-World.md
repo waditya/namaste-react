@@ -110,3 +110,6 @@ Reference : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Op
 
 A shimmer UI is a version of the UI that doesn't contain actual content, but instead mimics the layout and shapes of the content that will eventually appear.
 We can add empty cards to mimic a seamless UI. It will rendered until real data is fecched and rendered. 
+The idea behind the Shimmer UI is that you want to show user something very quickly - as soon as the page loads, the user should see something.
+The user will then anticipate that something is loading instead of an impression like web page is slow. 
+When the page is loading, you see something and then actual dataloads. 
