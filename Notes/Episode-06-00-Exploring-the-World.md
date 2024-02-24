@@ -120,3 +120,8 @@ A normal variable upon changing value will show the new value in console.log sta
 However, it won't show change in the rendering of UI.
 In order to dynamically change the state of the UI, normal JS variables are not useful .
 Hence, we need the local state variable which are made possible by useState hooks in React.
+
+## State React variable
+
+Whenever state variable updates, react triggers a reconciliation cycle i.e. it re-renders the componet.
+
