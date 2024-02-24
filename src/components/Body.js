@@ -9,8 +9,8 @@ const Body = () => {
 
     const [listofRestaurants, setlistofRestaurants] = useState([/* restaurantList */]);
     const [filteredRestaurants, setfilteredRestaurants] = useState([/* restaurantList */]);
+    const [searchText, setsearchText] = useState(""); // Local state variable for tracking seach text
 
-    const [searchText, setsearchText] = useState("");
     console.log("Body component rendering");
     useEffect(()=>{
         // console.log('useEffect called!');
