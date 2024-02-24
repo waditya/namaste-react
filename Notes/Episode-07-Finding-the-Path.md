@@ -29,5 +29,21 @@ As a convention, declare useState variables using useState hook within the top o
 of your functional component. React is a single thread synchronous language. Declaring the hooks
 some where at the middle or bottom can create issues while using the state variables or updating them. 
 
-Never create/declare useState variables within conditional statements like if-else condition.
+Never create/declare useState variables within conditional statements like if-else, for loop condition, functions
+It will create inconsistencies. 
 
+In nutshell, state variables are meant to be created within the functional component at the highest level. 
+
+## Routing of React Application
+
+React Router DOM is a popular npm JS library for React Router.
+
+https://reactrouter.com/en/main
+
+Whenever we have to develop routes, we have to create routing configuration.
+This can be done using createBrowserRouter. The configuration created needs to be provided to the App
+for rendering. RouterProvider does the job of proving this routing configuration.
+
+## useRouteError hook
+
+useRouteError is a hook given by React Router DOM. This hook gives more information about the error.
