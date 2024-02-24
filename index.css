@@ -90,3 +90,7 @@
 .filter {
     display: flex;
 }
+
+.filter-btn {
+    display: flex;
+}

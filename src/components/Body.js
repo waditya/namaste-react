@@ -9,6 +9,8 @@ const Body = () => {
 
     const [listofRestaurants, setlistofRestaurants] = useState([/* restaurantList */]);
 
+    const [searchText, setsearchText] = useState("");
+    console.log("Body component rendering");
     useEffect(()=>{
         // console.log('useEffect called!');
         fetchData();
@@ -35,17 +37,29 @@ const Body = () => {
         <div className="body">
             <div className="filter">
                 <div className="search">
-                    <input  type="text" className="searchbox"/>
+                    <input 
+                        type="text" 
+                        className="search-box" 
+                        value = {searchText} 
+                        onChange={(event) => {
+                            setsearchText(event.target.value);
+                    }}
+                    />
                     <button 
-                        className="search-button"> Search 
-                    </button>
+                        onClick= { ()=> {
+                            // Filter the restaurant cards and update the UI
+                            // searchText (content of the input box)
+                            console.log("Search query is : "+searchText);
+                        } 
+                    }> Search </button>
                 </div>
+                <div>
                 <button 
                     className="filter-btn" 
                     onClick={() => 
                     {   
                         const filteredList  = listofRestaurants.filter(
-                        (res) => res.avgRating > 4.2
+                        (res) => res.info.avgRating > 4.5
                     );
 
                     setlistofRestaurants(filteredList);
@@ -53,11 +67,10 @@ const Body = () => {
                         // console.log(listofRestaurants);
                         // alert("Filter Button Clicked!")
                     }}
-
-                    
-                    > 
-                    Top Rated restaurants 
+                > 
+                Top Rated restaurants 
                 </button>
+                </div>
             </div>
             <div className="restaurant-container">
                 {
