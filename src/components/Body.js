@@ -8,6 +8,7 @@ const Body = () => {
     // Local State Variable
 
     const [listofRestaurants, setlistofRestaurants] = useState([/* restaurantList */]);
+    const [filteredRestaurants, setfilteredRestaurants] = useState([/* restaurantList */]);
 
     const [searchText, setsearchText] = useState("");
     console.log("Body component rendering");
@@ -29,6 +30,7 @@ const Body = () => {
             json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
         );
         setlistofRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+        setfilteredRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     };
     
     // Conditional rendering
@@ -50,6 +52,14 @@ const Body = () => {
                             // Filter the restaurant cards and update the UI
                             // searchText (content of the input box)
                             console.log("Search query is : "+searchText);
+
+                            // Use Filter method from - Map Filter and Reduce in JS
+                            const filteredRestaurant = listofRestaurants.filter(
+                                (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+                            );
+
+                            setfilteredRestaurants(filteredRestaurant);
+                            
                         } 
                     }> Search </button>
                 </div>
@@ -62,7 +72,7 @@ const Body = () => {
                         (res) => res.info.avgRating > 4.5
                     );
 
-                    setlistofRestaurants(filteredList);
+                    setfilteredRestaurants(filteredList);
                         
                         // console.log(listofRestaurants);
                         // alert("Filter Button Clicked!")
@@ -74,7 +84,7 @@ const Body = () => {
             </div>
             <div className="restaurant-container">
                 {
-                    listofRestaurants.map(i => <RestaurantCard key= {i.info.id} restaurantData= { i }/>)
+                    filteredRestaurants.map(i => <RestaurantCard key= {i.info.id} restaurantData= { i }/>)
                 }
                 {/* {
                     restaurantList.map(jsonObject => <RestaurantCard key= {jsonObject.uuid} restaurantData= { jsonObject }/>)
