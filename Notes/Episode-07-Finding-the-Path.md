@@ -47,3 +47,34 @@ for rendering. RouterProvider does the job of proving this routing configuration
 ## useRouteError hook
 
 useRouteError is a hook given by React Router DOM. This hook gives more information about the error.
+
+## Outlet
+
+Whenever there is change in the path, outlet (in App.js) will be filled with the components in the path.
+
+## Link Component
+With conventional HTML-style anchoir tag (A href="/somelink"), the entire page lodes. 
+
+Link component is a super power given by react-router-dm. With Link component, you can have hyper links
+and only component within that page re-loads instead of entire page. 
+
+You can navigate to a different page without reloading the entire page.
+
+Link component is a super power given by React ROuter DOM
+
+# Single Page Application (SPA)
+
+React is a single page application (SPA). By clicking on links, the concerned componentis loaded. 
+With SPA, we don't have to reload the website. 
+
+## 2 types of routing in web application
+
+1. Server-side routing 
+We have index.thml, contact.html, about.html, home.html. If we click on say contact.html, it will send a network call to contact.html and 
+then render the page.
+
+2. Client-side routing 
+We do not make network calls seperately for going to links. Only network call made is when making 
+an API call. We don't make network call for web pages within a single page application.
+In the initial loading itself, we have details necessary to render the wen pages (components)
+
