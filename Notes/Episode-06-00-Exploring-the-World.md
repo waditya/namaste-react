@@ -125,5 +125,3 @@ Hence, we need the local state variable which are made possible by useState hook
 
 Whenever state variable updates, react triggers a reconciliation cycle i.e. it re-renders the componet.
 
-
-You can navigate to a different page without reloading the entire page.

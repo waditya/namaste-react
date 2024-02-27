@@ -1,11 +1,14 @@
 import React from "react"; // Import React from the react package in the node_modules
 import ReactDOM from "react-dom/client"; 
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
 import Header from "./components/Header";
 import Body from "./components/Body.js";
 import About from "./components/About.js";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
 import Error from "./components/Error.js";
 import Contact from "./components/Contact.js";
+import RestaurantMenu from "./components/RestaurantMenu.js";
 
 // AppLayout component is function which returns JSX code (which is a <div>)
 const AppLayout = () => {
@@ -36,6 +39,10 @@ const appRouter = createBrowserRouter([
                 path : "/contact",
                 element : <Contact/>,
             },
+            {
+                path: "/restaurants/:resId",
+                element: <RestaurantMenu/>,
+            }
         ],
         errorElement : <Error/>,
     },

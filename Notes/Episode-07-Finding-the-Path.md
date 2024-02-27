@@ -78,3 +78,7 @@ We do not make network calls seperately for going to links. Only network call ma
 an API call. We don't make network call for web pages within a single page application.
 In the initial loading itself, we have details necessary to render the wen pages (components)
 
+# Dynamic Routing
+
+
+
