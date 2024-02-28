@@ -85,7 +85,13 @@ const Body = () => {
             </div>
             <div className="restaurant-container">
                 {
-                    filteredRestaurants.map(i => <Link to={"/restaurants/"+i.info.id}><RestaurantCard key= {i.info.id} restaurantData= { i }/></Link>)
+                    filteredRestaurants.map(i => 
+                    <Link 
+                        key= {i.info.id}
+                        to={"/restaurants/"+i.info.id}
+                    >
+                        <RestaurantCard restaurantData= { i }/>
+                    </Link>)
                 }
                 {/* {
                     restaurantList.map(jsonObject => <RestaurantCard key= {jsonObject.uuid} restaurantData= { jsonObject }/>)
