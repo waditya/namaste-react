@@ -20,9 +20,11 @@ const RestaurantMenu = () => {
         
     };
 
-    
+    if(resInfo === null) {
+        <Shimmer />;
+    }
     // const { name, costForTwoMessage, cuisines } = resInfo?.cards[2]?.card?.card?.info;
-    console.log("Log the resInfo :"+resInfo);
+    console.log(resInfo);
 
     const name = 
         resInfo?.cards[2]?.card?.card?.info?.name;
@@ -33,8 +35,11 @@ const RestaurantMenu = () => {
     const cuisines= 
         resInfo?.cards[2]?.card?.card?.info?.cuisines; 
     
-   
-
+    const card = 
+        resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card;
+    
+    console.log(card);
+    
     // Destructure the input data
     
 
@@ -44,10 +49,17 @@ const RestaurantMenu = () => {
             <h3>{ cuisines }</h3>
             {/* <h3>{ cuisines.join(", ") }</h3> */}
             <h3>{costForTwoMessage}</h3>
+            <h2>Menu </h2>
             <ul>
-                <li>Biryanu</li>
-                <li>Burgers</li>
-                <li>Diet Coke</li>
+                {card?.itemCards.map(item => <li key={item.card.info.id}>{item.card.info.name} - ₹ {item.card.info.price/100}/-</li>)}
+
+                {/* <li>{card?.itemCards[0]?.card?.info?.name}</li>
+                <li>{card?.itemCards[1]?.card?.info?.name}</li>
+                <li>{card?.itemCards[2]?.card?.info?.name}</li>
+                <li>{card?.itemCards[3]?.card?.info?.name}</li>
+                <li>{card?.itemCards[4]?.card?.info?.name}</li>
+                <li>{card?.itemCards[5]?.card?.info?.name}</li> */}
+
             </ul>
         </div>
     );
