@@ -32,7 +32,7 @@ const RestaurantMenu = () => {
 
     const cuisines= 
         resInfo?.cards[2]?.card?.card?.info?.cuisines; 
-        
+    
    
 
     // Destructure the input data
@@ -41,8 +41,9 @@ const RestaurantMenu = () => {
     return (
         <div className="menu">
             <h1>{name}</h1>
-            <p>{ cuisines.join(", ") } - {costForTwoMessage}</p>
-            <h3></h3>
+            <h3>{ cuisines }</h3>
+            {/* <h3>{ cuisines.join(", ") }</h3> */}
+            <h3>{costForTwoMessage}</h3>
             <ul>
                 <li>Biryanu</li>
                 <li>Burgers</li>
