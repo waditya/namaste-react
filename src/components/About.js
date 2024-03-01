@@ -1,4 +1,5 @@
 import User from "./User";
+import UserClass from "./UserClass";
 
 const About = () => {
     return (
@@ -7,7 +8,8 @@ const About = () => {
             <h2> This company was formed in February 2024</h2>
             <h2> Meet the team </h2>
             <div>
-                <User />    
+                <User name = {"Aditya W"} location = {"US"} contact = {"myemail@mymail.com"}/>  
+                <UserClass name = {"Aditya D W"} location = {"USA"} contact = {"email@gmail.com"}/>  
             </div>
             
         </div>

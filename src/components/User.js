@@ -1,9 +1,9 @@
-const User = () => {
+const User = (props) => {
     return (
         <div className = "user-card">
-            <h2>Name : Aditya W</h2>
-            <h3>Location : United States</h3>
-            <h4>Contact : email@email.com</h4>
+            <h2>Name : {props.name}</h2>
+            <h3>Location : {props.location}</h3>
+            <h4>Contact : {props.contact}</h4>
         </div>
     )
 }
