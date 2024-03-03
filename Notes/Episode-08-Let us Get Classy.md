@@ -9,7 +9,7 @@ Creating functional component is a new way of writing React code.
 
 Learning class-based components will help us to understand React overall.
 
-## Creating State Variables inside Class-based component
+## Creating State Variables inside Class-based components
 
 We use a hook inside a functional component. 
 
