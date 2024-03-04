@@ -69,4 +69,8 @@ Clild-class-instance-02 componentDidMount
 
 Parent componentDidMount
 
-Markdown ![React Lifecycle Methods Diagram](../src/utils/React-lifecycle-methods-diagram.PNG);
+#### React Lifecycle Methods Diagram
+
+![React Lifecycle Methods Diagram](../src/utils/React-lifecycle-methods-diagram.PNG);
+
+Reference for above image - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
