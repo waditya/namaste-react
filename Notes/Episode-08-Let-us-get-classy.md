@@ -57,20 +57,26 @@ This is similar to the useEffect hook in React functional components.
 React does optimization by batching the Constructor and React of childs at same level and then call its 
 componetDidMount
 
-Parent Constructor
-Parent Render
-Clild-class-instance-01  Constructor
-Clild-class-instance-01 Render
-Clild-class-instance-02 Constructor
-Clild-class-instance-02 Render
+#### Render Phase (Constructir + Reder()) in a single batch
+1. Parent Constructor
+2. Parent Render
+3. Clild-class-instance-01  Constructor
+4. Clild-class-instance-01 Render
+5. Clild-class-instance-02 Constructor
+6. Clild-class-instance-02 Render
 
-Clild-class-instance-01 componentDidMount
-Clild-class-instance-02 componentDidMount
-
-Parent componentDidMount
+#### Commit Phase (DOM Manipulation, DOM loading, componentDidMount(), etc)
+7.Clild-class-instance-01 componentDidMount
+8. Clild-class-instance-02 componentDidMount
+9. Parent componentDidMount
 
 #### React Lifecycle Methods Diagram
 
 ![React Lifecycle Methods Diagram](../src/utils/React-lifecycle-methods-diagram.PNG);
 
 Reference for above image - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+React is batching the Render phase for multiple components. 
+The Commit phase is also batched. This phase consists of DOM loading.
+DOM loading is an expensive operation/task and takes more time compared to render phase.
+ Hence, it is batched and then the DOM is updated. 
