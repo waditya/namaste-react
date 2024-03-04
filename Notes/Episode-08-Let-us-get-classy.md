@@ -80,3 +80,16 @@ React is batching the Render phase for multiple components.
 The Commit phase is also batched. This phase consists of DOM loading.
 DOM loading is an expensive operation/task and takes more time compared to render phase.
  Hence, it is batched and then the DOM is updated. 
+
+ 0. --Mounting Cycle-----  
+ 1. Constructor (dummy data)  
+ 2. Render (dummy data)  
+ 3.  <HTML Dummy > , <Shimmer UI>
+ 4. ComponentDidMount  
+ 5.  <API Call>  
+ 6.  <this.setState> => State variable is updated
+ 7. ---- END of Mounting Cycle -----  
+ 8. -- Update Cycle begins -----  
+ 9. render (API data)  
+ 10. <HTML (new API Data)>
+ 11. ComponentDidUpdate

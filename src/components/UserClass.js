@@ -9,17 +9,38 @@ class UserClass extends React.Component {
         // this.state is a big object which consists of all the state variable
         this.state = {
             count:0,
-            count2:2
+            count2:2,
+            userInfo : {
+                name : "Dummy",
+                location: "default",
+                avatar_url: "http://dummy-photo.com",
+            },
         };
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         console.log(this.props.name+"componentDidMount");
         // Make API call here. React will re-render component once API call's response is received
+        const data = await fetch("https://api.github.com/users/waditya");
+        const json = await data.json(); // Add await because we are making a promise
+
+        console.log(json);
+
+        this.setState({
+            userInfo: json,
+        })
+    }
+
+    componentDidUpdate() {
+        console.log("Component Did Update");
+    }
+
+    componentWillUnmount() {
+        console.log("Component Will Unmount")
     }
 
     render() {
-        console.log("Inside render method of UserClass of"+this.props.name+"child instance");
+        const { name, location, avatar_url } = this.state.userInfo;
         return (
             <div className = "user-card">
             <button onClick={() => {
@@ -29,12 +50,10 @@ class UserClass extends React.Component {
                 });
             }}>Count Increase
             </button>
-            <h1>Count : {this.state.count}</h1>
-            
-            <h1>Count2 : {this.state.count2}</h1>
-            <h2>Name :{ this.props.name}</h2>
-            <h3>Location :  {this.props.location}</h3>
-            <h4>Contact :  {this.props.contact}</h4>
+            <img src={ avatar_url} />
+            <h2>Name :{ name }</h2>
+            <h3>Location :  {location}</h3>
+            <h4>Contact :  {this.state.userInfo.contact}</h4>
         </div>
         )
     }

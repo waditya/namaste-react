@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const User = (props) => {
     const [count] = useState(0);
     const [count2] = useState(2);
+
     return (
         <div className = "user-card">
             <h1>Count = {count} </h1>
