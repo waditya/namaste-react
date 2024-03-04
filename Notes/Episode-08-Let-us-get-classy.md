@@ -93,3 +93,9 @@ DOM loading is an expensive operation/task and takes more time compared to rende
  9. render (API data)  
  10. <HTML (new API Data)>
  11. ComponentDidUpdate
+
+ ### TIP 
+ Never ever componet React lifecycle methods to hooks of Functional Component
+ Eg - ComponentDidUpdate not equivalent to useEffect 
+
+ 
