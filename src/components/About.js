@@ -10,6 +10,7 @@ const About = () => {
             <div>
                 <User name = {"Aditya W (Functional)"} location = {"US"} contact = {"myemail@mymail.com"}/>  
                 <UserClass name = {"Aditya D W (Class)"} location = {"USA"} contact = {"email@gmail.com"}/>  
+                <UserClass name = {"Dhananjay A W (Class)"} location = {"India"} contact = {"email2@gmail.com"}/> 
             </div>
             
         </div>

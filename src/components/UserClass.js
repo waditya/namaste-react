@@ -4,7 +4,7 @@ class UserClass extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log("Constructor")
+        console.log(this.props.name+"Constructor")
         console.log(props);
         // this.state is a big object which consists of all the state variable
         this.state = {
@@ -14,12 +14,12 @@ class UserClass extends React.Component {
     }
 
     componentDidMount() {
-        console.log("Parent componentDidMount");
-        // Make API call here 
+        console.log(this.props.name+"componentDidMount");
+        // Make API call here. React will re-render component once API call's response is received
     }
 
     render() {
-        console.log("Inside render method of UserClass");
+        console.log("Inside render method of UserClass of"+this.props.name+"child instance");
         return (
             <div className = "user-card">
             <button onClick={() => {

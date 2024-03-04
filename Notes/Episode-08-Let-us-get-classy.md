@@ -66,9 +66,9 @@ componetDidMount
 6. Clild-class-instance-02 Render
 
 #### Commit Phase (DOM Manipulation, DOM loading, componentDidMount(), etc)
-7.Clild-class-instance-01 componentDidMount
-8. Clild-class-instance-02 componentDidMount
-9. Parent componentDidMount
+7. Clild-class-instance-01 componentDidMount  
+8. Clild-class-instance-02 componentDidMount  
+9. Parent componentDidMount  
 
 #### React Lifecycle Methods Diagram
 
