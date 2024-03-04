@@ -51,3 +51,22 @@ React will make API-call and once it receives the response with data.
 React will re-render the component with the data received from API call. 
 
 This is similar to the useEffect hook in React functional components.
+
+### Lifecycle methods with multiple instances of children
+
+React does optimization by batching the Constructor and React of childs at same level and then call its 
+componetDidMount
+
+Parent Constructor
+Parent Render
+Clild-class-instance-01  Constructor
+Clild-class-instance-01 Render
+Clild-class-instance-02 Constructor
+Clild-class-instance-02 Render
+
+Clild-class-instance-01 componentDidMount
+Clild-class-instance-02 componentDidMount
+
+Parent componentDidMount
+
+Markdown ![React Lifecycle Methods Diagram]("../src/utils/React-lifecycle-methods-diagram.PNG");
