@@ -112,3 +112,8 @@ We need to unmount to improve performance.
 
 Within a functional component's useEffect hook, return method is used to unMount component.
 You will clear your setInterval in the return method of useEffect hook. 
+
+## Topics to research
+
+1. Why super(props) and constructor(props) are used
+2. Why async cannot used in useEffect callback function. 
