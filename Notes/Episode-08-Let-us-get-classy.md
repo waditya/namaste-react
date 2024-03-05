@@ -98,4 +98,14 @@ DOM loading is an expensive operation/task and takes more time compared to rende
  Never ever componet React lifecycle methods to hooks of Functional Component
  Eg - ComponentDidUpdate not equivalent to useEffect 
 
- 
+ ## useEffect
+
+ No dependency array in useEffect useEffect({})-- Call render each time  
+ Empty dependency array useEffect({}, [])-- Called initially  
+ array with some variables useEffect({}, [variable])-- Rendered initially and then everytime the variable changes  
+
+## ComponentWillUnmount
+
+React is a single page application. When we click from one component to other component, 
+the previous component needs to un-rendered (unmounted), and new components is rendered. 
+
