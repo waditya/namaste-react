@@ -108,4 +108,7 @@ DOM loading is an expensive operation/task and takes more time compared to rende
 
 React is a single page application. When we click from one component to other component, 
 the previous component needs to un-rendered (unmounted), and new components is rendered. 
+We need to unmount to improve performance. 
 
+Within a functional component's useEffect hook, return method is used to unMount component.
+You will clear your setInterval in the return method of useEffect hook. 

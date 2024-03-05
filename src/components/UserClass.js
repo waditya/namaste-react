@@ -33,9 +33,14 @@ class UserClass extends React.Component {
 
     componentDidUpdate() {
         console.log("Component Did Update");
+
+        this.timer = setInterval(() => {
+            console.log("UserClass - componentDidMount")
+        }, 1000); // This will result in performance issues at large scale
     }
 
     componentWillUnmount() {
+        clearInterval(this.timer);
         console.log("Component Will Unmount")
     }
 
