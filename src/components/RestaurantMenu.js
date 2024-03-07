@@ -2,46 +2,35 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
 
-    const [resInfo, setresInfo] = useState(null);
-
     const { resId } = useParams();
-    console.log(resId);
-    console.log(typeof(resId));
+    // console.log(resId);
+    // console.log(typeof(resId));
 
+    const resInfo = useRestaurantMenu(resId); // useRestaurantMenu is a custom hook
+    
 
-    useEffect( () => {
-        fetchMenu();
-    }, []);
-
-    const fetchMenu = async () => {
-
-    const data = await fetch(MENU_API + resId); // "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5204303&lng=73.8567437&restaurantId=585360&catalog_qa=undefined&submitAction=ENTER"
-
-    const json = await data.json();
-    setresInfo(json.data);
-        
-    };
-
+    // Until we get the data from fetch API, the resInfo will be empty as intial value is null. Till we get data, display placeholders using Shimmer component
     if(resInfo === null) {
-        <Shimmer />;
+        <Shimmer />; 
     }
     // const { name, costForTwoMessage, cuisines } = resInfo?.cards[2]?.card?.card?.info;
     console.log(resInfo);
 
     const name = 
-        resInfo?.cards[2]?.card?.card?.info?.name;
+        resInfo?.cards[0]?.card?.card?.info?.name;
     
     const costForTwoMessage = 
-        resInfo?.cards[2]?.card?.card?.info?.costForTwoMessage;
+        resInfo?.cards[0]?.card?.card?.info?.costForTwoMessage;
 
     const cuisines= 
-        resInfo?.cards[2]?.card?.card?.info?.cuisines; 
+        resInfo?.cards[0]?.card?.card?.info?.cuisines; 
     
     const card = 
-        resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card;
+        resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card;
     
     console.log(card);
     
