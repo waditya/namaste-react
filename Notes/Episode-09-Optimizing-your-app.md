@@ -41,7 +41,21 @@ What is the input of the hook and what is it returning back to the caller (outpu
 ## Building large scale application
 
 Break application into small pieces. 
-
+Bundling
 App Chunking (aka code splitting)
 Dynamic bundling
 Lazy loading 
+On-demand loading
+
+### Suspend component in React
+
+When you do lazy loading using lazy() function from react, you see some error because it takes a while for the 
+browser to fect the JS file for the component which is loaded lazily. React is very fast. So, by the time it renders the page, the JS file for 
+lazy component is not available. Hence, we get an error. 
+
+In order to avaoid this, React provides a component known as Suspend.
+You can wrap your lazily loaded component in the <Suspend> component like below. 
+
+<Suspense fallback = { Grocery is loading..}>   
+<Grocery />
+</Suspend> 
