@@ -32,3 +32,16 @@ Similarly, the job of gettng the data should be abstracted from RestaurantMenu u
 
 1. useRestaurantMenu(resId) is a custom hook which fetches the data and provides it to the restaurantMenu.  
 2. The contract of the hook consists of getting the restaurantId from the calling component and returning the resInfo to the caller.
+
+## How to plan a custom hook
+
+Step-01 : Finalize the contract  
+What is the input of the hook and what is it returning back to the caller (output).
+
+## Building large scale application
+
+Break application into small pieces. 
+
+App Chunking (aka code splitting)
+Dynamic bundling
+Lazy loading 
