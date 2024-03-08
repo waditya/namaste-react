@@ -15,10 +15,10 @@ const Header = () => {
     }, []);
 
     return(
-        <div className="header">
+        <div className="flex">
             <div className="logo-container">
                 <img 
-                className="logo"
+                className="w-56"
                 src= {LOGO_URL} />
             </div>
             <div className="nav-items">
