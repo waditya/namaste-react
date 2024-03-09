@@ -27,4 +27,9 @@ postcss is a package to transform CSS with JavaScript.
 
 tailwindcss uses postcss behind the scenes. 
 
+Initialzie tailwindcss into our repository 
+
+It will create a config file tailwind.config.js
+
+### Tailwind css automatically gives you classname for every CSS that ypu would want to write into app
 
