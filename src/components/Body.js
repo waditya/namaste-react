@@ -59,7 +59,7 @@ const Body = () => {
                             setsearchText(event.target.value);
                     }}
                     />
-                    <button className="px-4 py-1 mx-6 bg-green-300"
+                    <button className="px-4 py-1 mx-2 bg-green-300"
                         onClick= { ()=> {
                             // Filter the restaurant cards and update the UI
                             // searchText (content of the input box)
@@ -76,8 +76,9 @@ const Body = () => {
                     }> Search 
                     </button>
                 </div>
+                <div className="search m-4 p-1 flex items-center">
                 <button 
-                    className="filter-btn px-4 py-1 mx-6 bg-green-300" 
+                    className="filter-btn px-4 py-1 bg-green-300" 
                     onClick={() => 
                     {   
                         const filteredList  = listofRestaurants.filter(
@@ -92,6 +93,8 @@ const Body = () => {
                 > 
                 Top Rated restaurants 
                 </button>
+                </div>
+                
             </div>
             <div className="restaurant-container">
                 {
