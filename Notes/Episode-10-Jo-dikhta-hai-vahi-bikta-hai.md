@@ -34,3 +34,6 @@ It will create a config file tailwind.config.js
 ### Tailwind css automatically gives you classname for every CSS that ypu would want to write into app
 
 - Tailwind CSS frameworks
+
+You can hardcode tailwindclasses. Example to specify hardcoded value of 2--px width,
+you can specify w-[200px]
