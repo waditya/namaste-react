@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
         resInfo?.cards[0]?.card?.card?.info?.costForTwoMessage;
 
     const cuisines= 
-        resInfo?.cards[0]?.card?.card?.info?.cuisines; 
+        resInfo?.cards[0]?.card?.card?.info?.cuisines.join(", "); 
     
     const card = 
         resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card;
@@ -38,14 +38,14 @@ const RestaurantMenu = () => {
     
 
     return (
-        <div className="menu">
-            <h1>{name}</h1>
-            <h3>{ cuisines }</h3>
-            {/* <h3>{ cuisines.join(", ") }</h3> */}
-            <h3>{costForTwoMessage}</h3>
-            <h2>Menu </h2>
+        <div className="menu bg-pink-400 w-96 bg-opacity-60 pb-5 ms-4">
+            <h1 className="font-extrabold py-1 m-4 text-lg">{name}</h1>
+            <h3 className="italic ml-1 mr-4 p-4">{ cuisines }</h3>
+            {/* <h3 className="italic ml-1 mr-4 p-4">{ cuisines.join(", ") }</h3> */}
+            <h3 className="italic  ml-1 mr-4 pb-2 pl-4">{costForTwoMessage}</h3>
+            <h2 className="font-bold pl-4 pb-2">Menu </h2>
             <ul>
-                {card?.itemCards.map(item => <li key={item.card.info.id}>{item.card.info.name} - ₹ {item.card.info.price/100}/-</li>)}
+                {card?.itemCards.map(item => <li className="m-4 p-0 bg-gray-200" key={item.card.info.id}>{item.card.info.name} - ₹ {item.card.info.price/100}/-</li>)}
 
                 {/* <li>{card?.itemCards[0]?.card?.info?.name}</li>
                 <li>{card?.itemCards[1]?.card?.info?.name}</li>

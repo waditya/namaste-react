@@ -37,3 +37,14 @@ It will create a config file tailwind.config.js
 
 You can hardcode tailwindclasses. Example to specify hardcoded value of 2--px width,
 you can specify w-[200px]
+
+### Advantages of Tailwind CSS--
+
+1. Faster development
+2. Lightweight framework  - Parcel will use only those css classes which are used in the JS and which are absolutely required in the prject. It will not ship unused CSS.
+3. Build complex classes.
+
+### Disadvantages
+
+2. Ugly code when lot of classes are used
+
