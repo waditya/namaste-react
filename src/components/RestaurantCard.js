@@ -18,16 +18,16 @@ const RestaurantCard = (props) => {
 
 
     return (
-        <div className="restaurant-card" style={styleCard}>
+        <div className="restaurant-card m-4 p-4 w-[300px] h-[472px] rounded-xl" style={styleCard}>
             <img
-            className="restaurant-logo"
+            className="restaurant-logo rounded-xl w-48"
             alt= { name }
             src = {"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId } />
-            <h3> { name }</h3>
-            <h5>{ cuisines.join(", ") }</h5>
-            <h4> { avgRating } stars</h4>
-            <h4> { costForTwo }</h4>
-            <h4> { sla?.slaString}</h4>
+            <h3 className="font-bold py-4 text-lg"> { name }</h3>
+            <h5 className="italic">{ cuisines.join(", ") }</h5>
+            <h4 className="font-bold py-4"> { avgRating } stars</h4>
+            <h4 className="italic"> { costForTwo }</h4>
+            <h4 className="italic"> { sla?.slaString}</h4>
         </div>
     )
 }
