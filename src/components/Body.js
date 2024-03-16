@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPremiumLabel} from "./RestaurantCard";
 import restaurantList from "../utils/mockData";
 import { useState, useEffect} from "react"; // useState is imported as named import from react
 import Shimmer from "./Shimmer";
@@ -12,8 +12,10 @@ const Body = () => {
     const [listofRestaurants, setlistofRestaurants] = useState([/* restaurantList */]);
     const [filteredRestaurants, setfilteredRestaurants] = useState([/* restaurantList */]);
     const [searchText, setsearchText] = useState(""); // Local state variable for tracking seach text
+    
+    const RestaurantCardPremium = withPremiumLabel(RestaurantCard);
 
-    console.log("Body component rendering");
+    console.log("Body component is rendered",listofRestaurants);
     useEffect(()=>{
         // console.log('useEffect called!');
         fetchData();
@@ -104,7 +106,12 @@ const Body = () => {
                         key= {i.info.id}
                         to={"/restaurants/"+i.info.id}
                     >
-                        <RestaurantCard restaurantData= { i }/>
+                        {/**If the restaurant is Premium, then add a premium label to it*/}
+                        {/* console.log({parseFloat(i.info.costForTwo.split(' ')[0].split('₹')[1]) >= 400 ? "true" : "false"}); */}
+                        { parseFloat(i.info.costForTwo.split(' ')[0].split('₹')[1]) >= 400 ? (
+                            <RestaurantCardPremium restaurantData= { i }/> ): (
+                            <RestaurantCard restaurantData= { i } />)
+                    }
                     </Link>)
                 }
                 {/* {
