@@ -10,4 +10,9 @@ All React apps have 2 layers- UI layer and Data layer
 UI layer is powered by data layer. It consists of JSX
 Data layer consists state, props ,local variables, etc.
 
-Building sections on Restaurant Menu
+Building sections on Restaurant Menu 
+
+Accordian is a type of UI where list can be collapsed and expanded. 
+There are 2 things - 
+1. Accordian Header
+2. Accordian data (body)
