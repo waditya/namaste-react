@@ -40,7 +40,7 @@ const RestaurantMenu = () => {
     
 
     return (
-        <div className="menu bg-pink-400 w-96 bg-opacity-60 pb-5 ms-4">
+        <div className="menu bg-pink-400 w-96 bg-opacity-60 pb-5 ms-4 text-center">
             <h1 className="font-extrabold py-1 m-4 text-lg">{name}</h1>
             <h3 className="italic ml-1 mr-4 p-4">{ cuisines }</h3>
             {/* <h3 className="italic ml-1 mr-4 p-4">{ cuisines.join(", ") }</h3> */}
