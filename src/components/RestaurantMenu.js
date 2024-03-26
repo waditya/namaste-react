@@ -41,8 +41,11 @@ const RestaurantMenu = () => {
             (c)=> c.card?.["card"]?.["@type"] === 
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
         ); //Map-filter-reduce
-    console.log("Logging categories below : ");
-    console.log(categories);
+    
+        console.log("Logging categories below : ");
+        console.log(categories);
+    
+    
     
 
     return (
@@ -54,9 +57,13 @@ const RestaurantMenu = () => {
 
             <h2 className="font-bold pl-4 pb-2">Menu </h2>
             {/** categories accordians */}
+            
             { categories.map( (category) => (
                 <RestaurantCategory data = {category?.card?.card} />
-                ))}
+                ))
+            }
+            
+            
             <ul>
                 {card?.itemCards.map(item => <li className="m-4 p-0 bg-gray-200" key={item.card.info.id}>{item.card.info.name} - ₹ {item.card.info.price/100}/-</li>)}
 
