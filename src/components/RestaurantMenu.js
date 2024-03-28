@@ -42,8 +42,8 @@ const RestaurantMenu = () => {
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
         ); //Map-filter-reduce
     
-        console.log("Logging categories below : ");
-        console.log(categories);
+        // console.log("Logging categories below : ");
+        // console.log(categories);
     
     
     
