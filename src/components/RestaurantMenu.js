@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import ShimmerMenu from "./ShimmerMenu";
 
 const RestaurantMenu = () => {
 
@@ -16,7 +17,7 @@ const RestaurantMenu = () => {
 
     // Until we get the data from fetch API, the resInfo will be empty as intial value is null. Till we get data, display placeholders using Shimmer component
     if(resInfo === null) {
-        <Shimmer />; 
+        return <ShimmerMenu />; 
     }
     // const { name, costForTwoMessage, cuisines } = resInfo?.cards[2]?.card?.card?.info;
     console.log(resInfo);
@@ -36,20 +37,17 @@ const RestaurantMenu = () => {
     console.log(card);
     console.log(resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
     
-    const categories = 
-        resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    const categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
             (c)=> c.card?.["card"]?.["@type"] === 
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-        ); //Map-filter-reduce
+        ); 
+        //Map-filter-reduce
     
         // console.log("Logging categories below : ");
         // console.log(categories);
-    
-    
-    
 
     return (
-        <div className="menu bg-pink-400 w-96 bg-opacity-60 pb-5 ms-4 text-center">
+        <div className="menu bg-pink-400 w-9/12 bg-opacity-60 pb-5 ms-4 text-center">
             <h1 className="font-extrabold py-1 m-4 text-2xl">{name}</h1>
             <h3 className="italic ml-1 mr-4 p-4">{ cuisines }</h3>
             {/* <h3 className="italic ml-1 mr-4 p-4">{ cuisines.join(", ") }</h3> */}
@@ -64,17 +62,9 @@ const RestaurantMenu = () => {
             }
             
             
-            <ul>
+            {/* <ul>
                 {card?.itemCards.map(item => <li className="m-4 p-0 bg-gray-200" key={item.card.info.id}>{item.card.info.name} - ₹ {item.card.info.price/100}/-</li>)}
-
-                {/* <li>{card?.itemCards[0]?.card?.info?.name}</li>
-                <li>{card?.itemCards[1]?.card?.info?.name}</li>
-                <li>{card?.itemCards[2]?.card?.info?.name}</li>
-                <li>{card?.itemCards[3]?.card?.info?.name}</li>
-                <li>{card?.itemCards[4]?.card?.info?.name}</li>
-                <li>{card?.itemCards[5]?.card?.info?.name}</li> */}
-
-            </ul>
+            </ul> */}
         </div>
     );
 };
