@@ -57,7 +57,7 @@ const RestaurantMenu = () => {
             {/** categories accordians */}
             
             { categories.map( (category) => (
-                <RestaurantCategory data = {category?.card?.card} />
+                <RestaurantCategory data = { category?.card?.card } />
                 ))
             }
             
