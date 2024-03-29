@@ -14,7 +14,7 @@ const RestaurantCategory = ({data}) => {
     }
     return (
     <div>
-        {/** Accordian Header */}
+        {/** Accordian Headers */}
         <div className="w-9/12 mx-auto my-4 bg-gray-200 shadow-lg p-4 cursor-pointer">
             <div className="flex justify-between" onClick={handleClick}>
                 <span className="font-bold text-lg"> 
