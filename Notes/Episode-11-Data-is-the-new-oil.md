@@ -16,3 +16,8 @@ Accordian is a type of UI where list can be collapsed and expanded...
 There are 2 things - 
 1. Accordian Header
 2. Accordian data (body)
+
+Controlled and Uncontrolled component
+
+RestaurantCategory is a controlled component and is controlled by RestaurantMenu.
+RC relies on its parent on what to do. 
