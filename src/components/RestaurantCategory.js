@@ -1,17 +1,14 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({data}) => {
+const RestaurantCategory = ({data, showItems, setShowIndex}) => {
     /** return Accordian in JSX */
-    
-    const [showItems, setShowItems] = useState(false);
 
-    console.log(data);
-    
     const handleClick = () => {
-        console.log("Accordian clicked");
-        setShowItems(!showItems);
-    }
+        //setShowItems(!showItems);
+        setShowIndex();
+    };
+
     return (
     <div>
         {/** Accordian Headers */}

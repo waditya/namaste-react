@@ -13,7 +13,7 @@ const RestaurantMenu = () => {
     // console.log(typeof(resId));
 
     const resInfo = useRestaurantMenu(resId); // useRestaurantMenu is a custom hook
-    
+    const [showIndex, setShowIndex] = useState(0);
 
     // Until we get the data from fetch API, the resInfo will be empty as intial value is null. Till we get data, display placeholders using Shimmer component
     if(resInfo === null) {
@@ -56,8 +56,13 @@ const RestaurantMenu = () => {
             <h2 className="font-bold pl-4 pb-2">Menu </h2>
             {/** categories accordians */}
             
-            { categories.map( (category) => (
-                <RestaurantCategory key = {category?.card?.card?.title} data = { category?.card?.card } />
+            { categories.map( (category, index) => (
+                <RestaurantCategory 
+                    key = {category?.card?.card?.title} 
+                    data = { category?.card?.card } 
+                    showItems = {index === showIndex? true : false }
+                    setShowIndex = {() => setShowIndex(index)}
+                    />
                 ))
             }
             
