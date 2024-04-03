@@ -21,3 +21,7 @@ Controlled and Uncontrolled component
 
 RestaurantCategory is a controlled component and is controlled by RestaurantMenu.
 RC relies on its parent on what to do. 
+
+Lifting state up in React 
+
+Reference - https://react.dev/learn/sharing-state-between-components
