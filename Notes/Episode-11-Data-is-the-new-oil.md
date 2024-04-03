@@ -25,3 +25,25 @@ RC relies on its parent on what to do.
 Lifting state up in React 
 
 Reference - https://react.dev/learn/sharing-state-between-components
+
+## Use Context 
+
+React context API
+
+### Concept of Props relay
+
+Passing data from one component to other is challenging.
+
+React has one way data flow.
+Parents to child. 
+
+Props drilling - The problem with passing props.
+
+React Context - It is a super power given by React to allow components lower down the hierarchy to
+access props data in a higher layer data. 
+
+Example - Logged In user info
+Theme : light theme / dark theme 
+
+This info is needed any where in app. Hence, this information should be used in Context
+and can be accessible from any where in the app. 
