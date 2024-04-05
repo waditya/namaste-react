@@ -1,7 +1,9 @@
 import { LOGO_URL } from "../utils/constants";
 import React, { useState, useEffect } from "react";
+import { useContext } from "react";
 import  { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
 
@@ -9,6 +11,10 @@ const Header = () => {
     console.log("Header Rendered");
 
     const onlineStatus = useOnlineStatus();
+    
+    const { loggedInUser} = useContext(UserContext);
+    console.log(loggedInUser);
+
 
     useEffect(() => {
         console.log("useEffect hook called");
@@ -51,6 +57,7 @@ const Header = () => {
                     >
                         {btnName}
                     </button>
+                    <li className="px-4 font-medium">{loggedInUser}</li>
                 </ul>
             </div>
         </div>

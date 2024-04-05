@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react"; // Import React from the react package in the node_modules
+import React, { lazy, Suspense, useEffect, useState } from "react"; // Import React from the react package in the node_modules
 import ReactDOM from "react-dom/client"; 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -11,18 +11,40 @@ import Contact from "./components/Contact.js";
 import RestaurantMenu from "./components/RestaurantMenu.js";
 // import Grocery from "./components/Grocery.js";
 
+import UserContext from "./utils/UserContext.js";
+
 // AppLayout component is function which returns JSX code (which is a <div>)
 
 // Import Grocery as a lazy loading. 
 const Grocery = lazy( () => import ("./components/Grocery.js"));
 const About = lazy( () => import ("./components/About.js"));
 
+
+
 const AppLayout = () => {
+
+    const [userName, setUserName] = useState();
+
+    // Authentication Code
+
+    useEffect( () => {
+        // Make an API call to the authenticator service. Send it username and password
+
+        const data = {
+            name : "John Doe",
+        };
+
+        setUserName(data.name);
+    }, [])
+
     return (
-        <div className="app">
-            <Header/>
-            <Outlet/>
-        </div>
+        <UserContext.Provider value = {{ loggedInUser : userName}}>
+            <div className="app">
+                    <Header/>
+                    <Outlet/> 
+            </div>
+            </UserContext.Provider>
+        
     )
 }
 // createBrowserRouter creates routing configuration.Configuration is information that will tell browser router when you click on a certain path

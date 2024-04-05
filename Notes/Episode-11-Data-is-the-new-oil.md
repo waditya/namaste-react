@@ -56,3 +56,12 @@ Example - UserCOntext.js within utils will keep the user login/logout context
 
 React has a library known as createContext which can be used to create objects of
 "createContext" type. 
+
+### Props versus Context 
+
+Data which is needed in multiple components is an ideal candidate to be put 
+in Context. Data which is passed from one component for a specific child component to consume
+is suitable to props.
+
+You can wrap the entire app within <UserContext.Provider> and pass value to the UserContextProvider
+as done in App.js
