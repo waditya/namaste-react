@@ -48,7 +48,8 @@ Theme : light theme / dark theme
 This info is needed any where in app. Hence, this information should be used in Context
 and can be accessible from any where in the app. 
 
-* Context is a global thing. It should not be kept inside a component.
+### React Context
+**Context** is a global thing. It should not be kept inside a component.
 Rather, in a global/central place. 
 
 Example - UserCOntext.js within utils will keep the user login/logout context 
