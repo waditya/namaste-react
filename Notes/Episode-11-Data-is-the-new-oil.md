@@ -40,7 +40,7 @@ Parents to child.
 Props drilling - The problem with passing props.
 
 React Context - It is a super power given by React to allow components lower down the hierarchy to
-access props data in a higher layer data...
+access props data in a higher layer data.
 
 
 
