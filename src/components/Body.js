@@ -4,6 +4,8 @@ import { useState, useEffect} from "react"; // useState is imported as named imp
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+import { useContext } from "react";
 
 const Body = () => {
 
@@ -48,6 +50,7 @@ const Body = () => {
         );
     }
         
+    const {loggedInUser, setUserName} = useContext(UserContext);
 
     return listofRestaurants.length === 0 ? <Shimmer /> : (
         <div className="body">
@@ -80,22 +83,30 @@ const Body = () => {
                     </button>
                 </div>
                 <div className="search m-4 p-1 flex items-center">
-                <button 
-                    className="filter-btn px-4 py-1 bg-green-300 rounded-2xl" 
-                    onClick={() => 
-                    {   
-                        const filteredList  = listofRestaurants.filter(
-                        (res) => res.info.avgRating > 4.5
-                    );
+                    <button 
+                        className="filter-btn px-4 py-1 bg-green-300 rounded-2xl" 
+                        onClick={() => 
+                        {   
+                            const filteredList  = listofRestaurants.filter(
+                            (res) => res.info.avgRating > 4.5
+                        );
 
-                    setfilteredRestaurants(filteredList);
-                        
-                        // console.log(listofRestaurants);
-                        // alert("Filter Button Clicked!")
-                    }}
-                > 
-                Top Rated restaurants 
-                </button>
+                        setfilteredRestaurants(filteredList);
+                            
+                            // console.log(listofRestaurants);
+                            // alert("Filter Button Clicked!")
+                        }}
+                    > 
+                    Top Rated restaurants 
+                    </button>
+                </div>
+                
+                <div className = "search m-4 p-1 flex items-center">
+                    <label>User Name : </label>
+                    <input 
+                        className="border border-black pl-1 ml-2" 
+                        value = {loggedInUser} 
+                        onChange= {(e) => setUserName(e.target.value)} />
                 </div>
                 
             </div>
