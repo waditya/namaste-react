@@ -67,3 +67,8 @@ is suitable to props.
 
 You can wrap the entire app within <UserContext.Provider> and pass value to the UserContextProvider
 as done in App.js
+
+### Context versus Redux
+
+Context is used for small to mid-sized apps. Redux is used for large scale apps as it
+is scalable and can be used to manage state of state variables. Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces.
