@@ -71,7 +71,7 @@ using the Selector, any change in the data of Redux store will result in change 
 
 ### Redux Architecture Workflow Diagram
 
-![Redux Architecture Workflow Diagram]("../src/utils/Redux-Architecure-workflow.PNG")
+![Redux Architecture Workflow Diagram](https://github.com/waditya/namaste-react/blob/main/src/utils/Redux-Architecure-workflow.PNG)
 
 
 
