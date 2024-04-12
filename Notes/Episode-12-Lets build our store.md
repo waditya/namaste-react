@@ -69,7 +69,9 @@ The phenomenon of using Selector is known as subscribing to the store.
 For example - If Header Component display the number of items in the cart by Subscribing to the Redux store
 using the Selector, any change in the data of Redux store will result in change of data in the Header component. 
 
+### Redux Architecture Workflow Diagram
 
+![Redux Architecture Workflow Diagram]("../src/utils/Redux-Architecure-workflow.PNG")
 
 
 
