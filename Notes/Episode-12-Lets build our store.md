@@ -67,7 +67,7 @@ Selector will give the data.
 The phenomenon of using Selector is known as subscribing to the store. 
 
 For example - If Header Component display the number of items in the cart by Subscribing to the Redux store
-through the Selector, any change in the data of Redux store will result in change of data in the Header component. 
+using the Selector, any change in the data of Redux store will result in change of data in the Header component. 
 
 
 
