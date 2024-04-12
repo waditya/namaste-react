@@ -58,7 +58,17 @@ Step-03 : This function will internally modify the cart.
 ### Terminologies 
 
 This function is know as Reducer aka reducer function.
-Reducer function modifies/ updates the slice of the Redux store
+Reducer function modifies/ updates the slice of the Redux store. 
+
+### Reading data from the Cart Slice in Redux Store
+
+We use selector to read data from the Redux store
+Selector will give the data.
+The phenomenon of using Selector is known as subscribing to the store. 
+
+For example - If Header Component display the number of items in the cart by Subscribing to the Redux store
+through the Selector, any change in the data of Redux store will result in change of data in the Header component. 
+
 
 
 
