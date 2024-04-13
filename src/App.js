@@ -12,6 +12,8 @@ import RestaurantMenu from "./components/RestaurantMenu.js";
 // import Grocery from "./components/Grocery.js";
 
 import UserContext from "./utils/UserContext.js";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore.js";
 
 // AppLayout component is function which returns JSX code (which is a <div>)
 
@@ -38,13 +40,14 @@ const AppLayout = () => {
     }, [])
 
     return (
-        <UserContext.Provider value = {{ loggedInUser : userName, setUserName}}>
-            <div className="app">
-                    <Header/>
-                    <Outlet/> 
-            </div>
-            </UserContext.Provider>
-        
+        <Provider store={appStore}>
+            <UserContext.Provider value = {{ loggedInUser : userName, setUserName}}>
+                <div className="app">
+                        <Header/>
+                        <Outlet/> 
+                </div>
+                </UserContext.Provider>
+        </Provider>
     )
 }
 // createBrowserRouter creates routing configuration.Configuration is information that will tell browser router when you click on a certain path

@@ -4,6 +4,8 @@ import { useContext } from "react";
 import  { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
+import appStore from "../utils/appStore";
 
 const Header = () => {
 
@@ -19,6 +21,10 @@ const Header = () => {
     useEffect(() => {
         console.log("useEffect hook called");
     }, []);
+
+    // Selector for CartSlice in AppStore (Redux)
+    // Subscribing to the store using Selector
+    const cartItems = useSelector((store) => store.cart.items);
 
     return(
         <div className="flex justify-between bg-pink-100 shadow-lg mb sm:bg-yellow-50 lg:bg-green-400">
@@ -44,8 +50,9 @@ const Header = () => {
                     <li className="pr-4">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li className="pr-4">
-                        <Link to="/">Cart</Link>
+                    <li className="pr-4 font-bold text-xl">
+                        <Link to="/">Cart ({cartItems.length
+                         }) items</Link>
                     </li>
                     <button 
                         className="login" 
