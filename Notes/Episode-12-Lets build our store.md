@@ -73,6 +73,14 @@ using the Selector, any change in the data of Redux store will result in change 
 
 ![Redux Architecture Workflow Diagram](https://github.com/waditya/namaste-react/blob/main/src/utils/Redux-Architecure-workflow.PNG)
 
+## Working with Redux Toolkit
+
+ - Install @reduxjs/toolkit and react-redux
+ - Build our Redux store
+ - Connect Redux store to the App
+ - Create Slice (CartSlice)
+ - Dispact an Action dispatch(action)
+ - Selector (Read data using selector)
 
 
 
